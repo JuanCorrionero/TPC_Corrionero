@@ -4,16 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClassLibrary1
+namespace Dominio
+
 {
-    class Docentes : Usuarios
+    public class Alumnos : Usuarios
     {
-        public Docentes()
+        public Alumnos()
         {
+
         }
 
         public long Legajo { get; set; }
-        public int MyProperty { get; set; }
         public Comision Comision { get; set; }
+
     }
 }

@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClassLibrary1
+namespace Dominio
 {
-    class Carrera
+    public class Instancia
     {
         public string Nombre { get; set; }
+        public string Observacion { get; set; }
     }
 }

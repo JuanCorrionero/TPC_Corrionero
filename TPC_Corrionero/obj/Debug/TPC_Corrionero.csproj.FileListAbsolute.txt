@@ -47,10 +47,8 @@ C:\Users\Juaniyeppi\source\repos\TPC_Corrionero\TPC_Corrionero\bin\roslyn\vbc.ex
 C:\Users\Juaniyeppi\source\repos\TPC_Corrionero\TPC_Corrionero\bin\roslyn\vbc.rsp
 C:\Users\Juaniyeppi\source\repos\TPC_Corrionero\TPC_Corrionero\bin\roslyn\VBCSCompiler.exe
 C:\Users\Juaniyeppi\source\repos\TPC_Corrionero\TPC_Corrionero\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\Juaniyeppi\source\repos\TPC_Corrionero\TPC_Corrionero\bin\ClassLibrary1.dll
 C:\Users\Juaniyeppi\source\repos\TPC_Corrionero\TPC_Corrionero\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\Juaniyeppi\source\repos\TPC_Corrionero\TPC_Corrionero\bin\Negocio.dll
-C:\Users\Juaniyeppi\source\repos\TPC_Corrionero\TPC_Corrionero\bin\ClassLibrary1.pdb
 C:\Users\Juaniyeppi\source\repos\TPC_Corrionero\TPC_Corrionero\bin\Negocio.pdb
 C:\Users\Juaniyeppi\source\repos\TPC_Corrionero\TPC_Corrionero\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\Juaniyeppi\source\repos\TPC_Corrionero\TPC_Corrionero\obj\Debug\TPC_Corrionero.csprojAssemblyReference.cache
@@ -58,3 +56,5 @@ C:\Users\Juaniyeppi\source\repos\TPC_Corrionero\TPC_Corrionero\obj\Debug\TPC_Cor
 C:\Users\Juaniyeppi\source\repos\TPC_Corrionero\TPC_Corrionero\obj\Debug\TPC_Corrionero.csproj.CopyComplete
 C:\Users\Juaniyeppi\source\repos\TPC_Corrionero\TPC_Corrionero\obj\Debug\TPC_Corrionero.dll
 C:\Users\Juaniyeppi\source\repos\TPC_Corrionero\TPC_Corrionero\obj\Debug\TPC_Corrionero.pdb
+C:\Users\Juaniyeppi\source\repos\TPC_Corrionero\TPC_Corrionero\bin\Dominio.dll
+C:\Users\Juaniyeppi\source\repos\TPC_Corrionero\TPC_Corrionero\bin\Dominio.pdb

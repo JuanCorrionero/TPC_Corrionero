@@ -1,6 +1,0 @@
-C:\Users\Juaniyeppi\source\repos\TPC_Corrionero\ClassLibrary1\bin\Debug\ClassLibrary1.dll
-C:\Users\Juaniyeppi\source\repos\TPC_Corrionero\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
-C:\Users\Juaniyeppi\source\repos\TPC_Corrionero\ClassLibrary1\obj\Debug\Dominio.csprojAssemblyReference.cache
-C:\Users\Juaniyeppi\source\repos\TPC_Corrionero\ClassLibrary1\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
-C:\Users\Juaniyeppi\source\repos\TPC_Corrionero\ClassLibrary1\obj\Debug\ClassLibrary1.dll
-C:\Users\Juaniyeppi\source\repos\TPC_Corrionero\ClassLibrary1\obj\Debug\ClassLibrary1.pdb

@@ -67,11 +67,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AltaAlumno.aspx" />
     <Content Include="Global.asax" />
     <Content Include="PaginaPrincipal.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AltaAlumno.aspx.cs">
+      <DependentUpon>AltaAlumno.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AltaAlumno.aspx.designer.cs">
+      <DependentUpon>AltaAlumno.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -106,10 +114,6 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ClassLibrary1\Dominio.csproj">
-      <Project>{707b6a26-482c-432a-8751-7c28debafe5d}</Project>
-      <Name>Dominio</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Negocio\Negocio.csproj">
       <Project>{d3f499f0-6db5-4ee6-b171-7074800812ed}</Project>
       <Name>Negocio</Name>

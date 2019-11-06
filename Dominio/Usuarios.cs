@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClassLibrary1
+namespace Dominio
 {
-    class Usuarios
+    public class Usuarios
     {
         public string Nombre { get; set; }
         public string Apellido { get; set; }

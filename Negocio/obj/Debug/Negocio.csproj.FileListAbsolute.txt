@@ -1,9 +1,9 @@
 C:\Users\Juaniyeppi\source\repos\TPC_Corrionero\Negocio\bin\Debug\Negocio.dll
 C:\Users\Juaniyeppi\source\repos\TPC_Corrionero\Negocio\bin\Debug\Negocio.pdb
-C:\Users\Juaniyeppi\source\repos\TPC_Corrionero\Negocio\bin\Debug\ClassLibrary1.dll
-C:\Users\Juaniyeppi\source\repos\TPC_Corrionero\Negocio\bin\Debug\ClassLibrary1.pdb
 C:\Users\Juaniyeppi\source\repos\TPC_Corrionero\Negocio\obj\Debug\Negocio.csprojAssemblyReference.cache
 C:\Users\Juaniyeppi\source\repos\TPC_Corrionero\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
 C:\Users\Juaniyeppi\source\repos\TPC_Corrionero\Negocio\obj\Debug\Negocio.csproj.CopyComplete
 C:\Users\Juaniyeppi\source\repos\TPC_Corrionero\Negocio\obj\Debug\Negocio.dll
 C:\Users\Juaniyeppi\source\repos\TPC_Corrionero\Negocio\obj\Debug\Negocio.pdb
+C:\Users\Juaniyeppi\source\repos\TPC_Corrionero\Negocio\bin\Debug\Dominio.dll
+C:\Users\Juaniyeppi\source\repos\TPC_Corrionero\Negocio\bin\Debug\Dominio.pdb

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClassLibrary1
+namespace Dominio
 {
-    class Comision
+    public class Comision
     {
         public Materia Materia { get; set; }
         public string Turno { get; set; }
