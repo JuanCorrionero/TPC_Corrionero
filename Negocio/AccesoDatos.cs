@@ -16,7 +16,7 @@ namespace Negocio
 
             public AccesoDatos()
             {
-                conexion = new SqlConnection("data source=DESKTOP-IRCN5AN\\SQLEXPRESS; initial catalog=TPC_CORRIONERO; integrated security=sspi");
+                conexion = new SqlConnection("data source=DESKTOP-IRCN5AN\\SQLEXPRESS; initial catalog=CORRIONERO_DB; integrated security=sspi");
                 comando = new SqlCommand();
                 comando.Connection = conexion;
             }

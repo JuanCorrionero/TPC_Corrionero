@@ -68,7 +68,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AltaAlumno.aspx" />
+    <Content Include="AltaDocente.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="PaginaError.aspx" />
     <Content Include="PaginaPrincipal.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -80,6 +82,13 @@
     <Compile Include="AltaAlumno.aspx.designer.cs">
       <DependentUpon>AltaAlumno.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AltaDocente.aspx.cs">
+      <DependentUpon>AltaDocente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AltaDocente.aspx.designer.cs">
+      <DependentUpon>AltaDocente.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -89,6 +98,13 @@
     </Compile>
     <Compile Include="ModeloMaster.Master.designer.cs">
       <DependentUpon>ModeloMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="PaginaError.aspx.cs">
+      <DependentUpon>PaginaError.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaginaError.aspx.designer.cs">
+      <DependentUpon>PaginaError.aspx</DependentUpon>
     </Compile>
     <Compile Include="PaginaPrincipal.aspx.cs">
       <DependentUpon>PaginaPrincipal.aspx</DependentUpon>
@@ -114,6 +130,10 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Dominio\Dominio.csproj">
+      <Project>{ca5d004b-7e2a-4351-816c-a7ce570a4ec5}</Project>
+      <Name>Dominio</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Negocio\Negocio.csproj">
       <Project>{d3f499f0-6db5-4ee6-b171-7074800812ed}</Project>
       <Name>Negocio</Name>

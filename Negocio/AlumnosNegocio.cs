@@ -9,18 +9,26 @@ using Dominio;
 
 namespace Negocio
 {
-    class AlumnosNegocio
+    public class AlumnosNegocio
     {
-        public void CrearCliente(Usuarios userWeb, Alumnos alumnoWeb)
+        public bool AltaAlumno(Alumnos alumnoWeb)
         {
             //Instancio primero acceso a datos.
             AccesoDatos accesoDatos = new AccesoDatos();
-            Alumnos alumnos = new Alumnos();
-
+            
             try
             {
+                accesoDatos.setearQuery("insert into Alumnos values(@Nombre, @Apellido, @Dni, @Email, @Telefono, @Direccion, @Legajo)");
+                accesoDatos.agregarParametro("@Nombre", alumnoWeb.Nombre);
+                accesoDatos.agregarParametro("Apellido", alumnoWeb.Apellido);
+                accesoDatos.agregarParametro("@Dni", alumnoWeb.Dni);
+                accesoDatos.agregarParametro("@Email", alumnoWeb.Mail);
+                accesoDatos.agregarParametro("@Telefono", alumnoWeb.Telefono);
+                accesoDatos.agregarParametro("@Direccion", alumnoWeb.Direccion);
+                accesoDatos.agregarParametro("@Legajo", alumnoWeb.Legajo);
 
-
+                accesoDatos.ejecutarAccion();
+                return true;
 
             }
             catch (Exception ex)
@@ -29,6 +37,10 @@ namespace Negocio
                 throw ex;
             }
 
+            finally
+            {
+                accesoDatos.cerrarConexion();
+            }
         }
     }
 }

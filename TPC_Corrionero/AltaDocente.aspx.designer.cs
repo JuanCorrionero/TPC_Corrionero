@@ -10,7 +10,7 @@
 namespace TPC_Corrionero {
     
     
-    public partial class AltaAlumno {
+    public partial class AltaDocente {
         
         /// <summary>
         /// Control txtNombre.

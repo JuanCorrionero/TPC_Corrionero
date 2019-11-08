@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Negocio
 {
-    class InstanciaNegocio
+    public class InstanciaNegocio
     {
     }
 }

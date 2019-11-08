@@ -1,11 +1,12 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ModeloMaster.Master" AutoEventWireup="true" CodeBehind="AltaAlumno.aspx.cs" Inherits="TPC_Corrionero.AltaAlumno" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ModeloMaster.Master" AutoEventWireup="true" CodeBehind="AltaDocente.aspx.cs" Inherits="TPC_Corrionero.AltaDocente" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container"> 
         <div style="background-color:black;color:white;padding:20px;">
         <h2>
-            Ingrese los datos del alumno.
+            Ingrese los datos del docente.
         </h2>
   
 </div>
