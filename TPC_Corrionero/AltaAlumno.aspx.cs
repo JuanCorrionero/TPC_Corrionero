@@ -29,7 +29,8 @@ namespace TPC_Corrionero
             AlumnosNegocio negocioAlumno = new AlumnosNegocio();
             if (negocioAlumno.AltaAlumno(alumno)== true)
             {
-                Response.Write("<script>alert('Alumno creado con éxito!')</script>");
+                Session.Add("Exito", "Alumno cargado con exito!");
+                Response.Redirect("PaginaExito.aspx");
             }
             else
             {

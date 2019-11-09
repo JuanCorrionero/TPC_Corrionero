@@ -16,8 +16,10 @@ namespace TPC_Corrionero
 
         }
 
-       // TODO: Hacer la pagina principal con navegacion para crear un alumno y un docente
+       // TODO: Hacer la pagina principal con navegacion para crear un alumno y un docente - ok
        // TODO: Luego poder asignarle una comision para poder crearle una instancia y poder agregarle cmentarios.
+       // TODO: Diseñar la pagina principal - login a lo ultimo, y sus validaciones
+       // TODO: 
 
         protected void btnAceptar_Click(object sender, EventArgs e)
         {
@@ -30,9 +32,10 @@ namespace TPC_Corrionero
             docente.Direccion = txtDireccion.Text;
             docente.Legajo = Convert.ToInt64(txtLegajo.Text);
             DocentesNegocio negocioDocente = new DocentesNegocio();
-            if (negocioDocente.CrearCliente(docente) == true)
+            if (negocioDocente.altaDocente(docente) == true)
             {
-                Response.Write("<script>alert('Alumno creado con éxito!')</script>");
+                Session.Add("Exito", "Docente agregado con exito!");
+                Response.Redirect("PaginaExito.aspx");
             }
             else
             {

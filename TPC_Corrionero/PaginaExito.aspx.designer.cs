@@ -10,6 +10,6 @@
 namespace TPC_Corrionero {
     
     
-    public partial class PaginaPrincipal {
+    public partial class PaginaExito {
     }
 }

@@ -68,10 +68,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AltaAlumno.aspx" />
+    <Content Include="AltaCarrera.aspx" />
     <Content Include="AltaDocente.aspx" />
     <Content Include="Global.asax" />
     <Content Include="PaginaError.aspx" />
-    <Content Include="PaginaPrincipal.aspx" />
+    <Content Include="PaginaExito.aspx" />
+    <Content Include="PagPrincipal.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -81,6 +83,13 @@
     </Compile>
     <Compile Include="AltaAlumno.aspx.designer.cs">
       <DependentUpon>AltaAlumno.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AltaCarrera.aspx.cs">
+      <DependentUpon>AltaCarrera.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AltaCarrera.aspx.designer.cs">
+      <DependentUpon>AltaCarrera.aspx</DependentUpon>
     </Compile>
     <Compile Include="AltaDocente.aspx.cs">
       <DependentUpon>AltaDocente.aspx</DependentUpon>
@@ -106,12 +115,19 @@
     <Compile Include="PaginaError.aspx.designer.cs">
       <DependentUpon>PaginaError.aspx</DependentUpon>
     </Compile>
-    <Compile Include="PaginaPrincipal.aspx.cs">
-      <DependentUpon>PaginaPrincipal.aspx</DependentUpon>
+    <Compile Include="PaginaExito.aspx.cs">
+      <DependentUpon>PaginaExito.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="PaginaPrincipal.aspx.designer.cs">
-      <DependentUpon>PaginaPrincipal.aspx</DependentUpon>
+    <Compile Include="PaginaExito.aspx.designer.cs">
+      <DependentUpon>PaginaExito.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagPrincipal.aspx.cs">
+      <DependentUpon>PagPrincipal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagPrincipal.aspx.designer.cs">
+      <DependentUpon>PagPrincipal.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

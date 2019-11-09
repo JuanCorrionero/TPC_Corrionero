@@ -3,5 +3,5 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
          <p><% = Session["Error" + Session.SessionID] %></p>
-            <a class="btn btn-primary" style="margin-left: 150px; margin-bottom: 15px;" href="AltaAlumno.aspx">Aceptar</a>
+            <a class="btn btn-primary" style="margin-left: 150px; margin-bottom: 15px;" href="PagPrincipal.aspx">Aceptar</a>
 </asp:Content>
