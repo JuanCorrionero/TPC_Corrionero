@@ -5,11 +5,12 @@
 
     <div class="container">
         <div class="row">
-
-            <asp:TextBox ID="txtMateria" placeholder="Nombre Materia" runat="server"></asp:TextBox>
             <br />
+            <asp:TextBox ID="txtMateria" placeholder="Nombre Materia" runat="server"></asp:TextBox>
+            
             <asp:DropDownList ID="dropDownCarrera"  runat="server"></asp:DropDownList>
-
+            <br />
+            <asp:Button CssClass="btn btn-dark" ID="btnAgregar" runat="server" Text="Agregar" OnClick="btnAgregar_Click" />
         </div>
 
     </div>

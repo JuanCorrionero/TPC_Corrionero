@@ -24,6 +24,7 @@
             <a class="nav-link active" href="AltaAlumno.aspx">Inscribir Alumno</a>
             <a class="nav-link active"  href="AltaDocente.aspx">Inscribir Docente</a>
             <a class="nav-link active" href="AltaCarrera.aspx">Agregar Carrera</a>
+            <a class="nav-link active" href="AltaMateria.aspx">Agregar Materia</a>
 
         </nav>
         
