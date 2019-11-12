@@ -10,5 +10,10 @@ namespace Dominio
     {
         public string Nombre { get; set; }
         public string Observacion { get; set; }
+
+        public override string ToString()
+        {
+            return Observacion;
+        }
     }
 }

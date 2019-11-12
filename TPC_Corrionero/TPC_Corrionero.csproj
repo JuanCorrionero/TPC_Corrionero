@@ -70,6 +70,7 @@
     <Content Include="AltaAlumno.aspx" />
     <Content Include="AltaCarrera.aspx" />
     <Content Include="AltaDocente.aspx" />
+    <Content Include="AltaMateria.aspx" />
     <Content Include="Global.asax" />
     <Content Include="PaginaError.aspx" />
     <Content Include="PaginaExito.aspx" />
@@ -97,6 +98,13 @@
     </Compile>
     <Compile Include="AltaDocente.aspx.designer.cs">
       <DependentUpon>AltaDocente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AltaMateria.aspx.cs">
+      <DependentUpon>AltaMateria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AltaMateria.aspx.designer.cs">
+      <DependentUpon>AltaMateria.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

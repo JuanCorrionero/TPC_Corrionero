@@ -35,6 +35,42 @@ namespace Negocio
         }
     }
 
+        public List<Carrera> listar()
+        {
+
+            Carrera aux = new Carrera();
+            List<Carrera> lista = new List<Carrera>();
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+
+            datos.setearQuery("Select Id, Nombre from Carrera");
+            datos.ejecutarLector();
+            while(datos.lector.Read())
+            {
+                aux = new Carrera();
+                aux.Id = datos.lector.GetInt64(0);
+                aux.Nombre = datos.lector.GetString(1);
+
+                lista.Add(aux);
+            }
+
+            return lista;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+            finally
+            {
+                datos.cerrarConexion();
+            }
+
+        }
+
 
     }
 }
