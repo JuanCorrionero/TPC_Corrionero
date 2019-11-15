@@ -9,7 +9,7 @@ namespace Negocio
 {
     public class MateriaNegocio
     {
-        public void AltaMateria (Materia materiaWeb)
+        public bool AltaMateria (Materia materiaWeb, long idCarrera)
         {
 
             AccesoDatos datos = new AccesoDatos();
@@ -19,19 +19,21 @@ namespace Negocio
             {
                 datos.setearQuery("Insert into Materias values (@Nombre,@IdCarrera)");
                 datos.agregarParametro("@Nombre", materiaWeb.Nombre);
-                datos.agregarParametro("@IdCarrera", materiaWeb.Carrera.Id);
+                datos.agregarParametro("@IdCarrera", idCarrera);
+                datos.ejecutarAccion();
 
-
+                return true;
             }
             catch (Exception ex)
             {
 
                 throw ex;
+                return false;
             }
 
             finally
             {
-
+                datos.cerrarConexion();
             }
         }
 

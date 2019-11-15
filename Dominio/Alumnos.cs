@@ -22,5 +22,11 @@ namespace Dominio
         public long Legajo { get; set; }
         public Comision Comision { get; set; }
 
+        public override string ToString()
+        {
+            Nombre = Apellido + ", " + Nombre;
+            return Nombre;
+        }
+
     }
 }

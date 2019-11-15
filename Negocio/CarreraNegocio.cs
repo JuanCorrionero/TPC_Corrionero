@@ -37,22 +37,23 @@ namespace Negocio
 
         public List<Carrera> listar()
         {
-
+            // Instancio carrera, la lista de carrera y los datos
             Carrera aux = new Carrera();
             List<Carrera> lista = new List<Carrera>();
             AccesoDatos datos = new AccesoDatos();
 
             try
             {
-
+                // Seteo la query donde voy a leer en la DB
             datos.setearQuery("Select Id, Nombre from Carrera");
+                // ejecuto
             datos.ejecutarLector();
             while(datos.lector.Read())
             {
                 aux = new Carrera();
                 aux.Id = datos.lector.GetInt64(0);
                 aux.Nombre = datos.lector.GetString(1);
-
+                
                 lista.Add(aux);
             }
 
