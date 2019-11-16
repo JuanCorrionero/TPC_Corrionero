@@ -6,13 +6,13 @@
     <div class="container">
         <div style="background-color:black;color:white;">
             <h1>Ingrese el nombre de la Carrera</h1>
-
+            <br />
         </div>
 
         <div class="row">
             <div class="col-4">
 
-        <br />
+        
         <asp:TextBox ID="txtNombre" CssClass="form-control" runat="server" placeholder="Carrera"></asp:TextBox>
         <br />
         <asp:Button ID="btnAceptar" CssClass="btn btn-outline-dark" runat="server" Text="Aceptar" OnClick="btnAceptar_Click" />

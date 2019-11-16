@@ -35,7 +35,7 @@ namespace TPC_Corrionero
             // TODO: Revisar como traer la informacion del dropdownlist para traer el objeto o al menos la info.
             // Solucionado 15/11 - Tiene que haber otra forma menos fea de hacer.
             long idCarrera = Convert.ToInt64( dropDownCarrera.SelectedItem.Value);
-            if(negocio.AltaMateria(materia, idCarrera))
+            if (negocio.AltaMateria(materia, idCarrera))
             {
                 Session.Add("Exito", "Materia ingresada con éxito!");
                 Response.Redirect("PaginaExito.aspx");

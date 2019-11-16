@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="AltaAlumno.aspx" />
     <Content Include="AltaCarrera.aspx" />
+    <Content Include="AltaComision.aspx" />
     <Content Include="AltaDocente.aspx" />
     <Content Include="AltaMateria.aspx" />
     <Content Include="Global.asax" />
@@ -91,6 +92,13 @@
     </Compile>
     <Compile Include="AltaCarrera.aspx.designer.cs">
       <DependentUpon>AltaCarrera.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AltaComision.aspx.cs">
+      <DependentUpon>AltaComision.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AltaComision.aspx.designer.cs">
+      <DependentUpon>AltaComision.aspx</DependentUpon>
     </Compile>
     <Compile Include="AltaDocente.aspx.cs">
       <DependentUpon>AltaDocente.aspx</DependentUpon>
