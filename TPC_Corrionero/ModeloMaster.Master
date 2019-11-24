@@ -26,6 +26,7 @@
             <a class="nav-link active" href="AltaCarrera.aspx">Agregar Carrera</a>
             <a class="nav-link active" href="AltaMateria.aspx">Agregar Materia</a>
             <a class="nav-link active" href="AltaComision.aspx">Agregar Comision</a>
+            <a class="nav-link active" href="ListarComision.aspx">Listar Comisiones</a>
 
         </nav>
         

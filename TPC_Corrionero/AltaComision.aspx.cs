@@ -33,5 +33,45 @@ namespace TPC_Corrionero
 
             }
         }
+
+        protected void btnAceptar_Click(object sender, EventArgs e)
+        {
+
+
+            try
+            {
+            ComisionNegocio negocio = new ComisionNegocio();
+            Comision comision = new Comision();
+                // comision.Turno = new Turnos();
+            Materia materia = new Materia();
+            Turnos turno = new Turnos();
+                comision.Nombre = txtNombre.Text;
+                comision.Cuatrimestre = Convert.ToInt16(txtCuatrimestre.Text);
+                long idTurno = Convert.ToInt64(dwTurnos.SelectedItem.Value);
+                long idMateria = Convert.ToInt64(dwMateria.SelectedItem.Value);
+                if(negocio.altaComision(comision, idTurno, idMateria))
+                {
+                    Session.Add("Exito", "La comision ha sido agregada con exito!");
+                    Response.Redirect("PaginaExito.aspx");
+                }
+                else
+                {
+                    Session.Add("Error", "Hubo un error dando de alta la comision");
+                    Response.Redirect("PaginaError.aspx");
+                }
+                //comision.Turno.Id = algo; 
+                //comision.Materia.Id = algo1;
+            
+                
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
     }
 }

@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace Dominio
 {
-    public class Instancia
+    class AlumnosXComision
     {
+        public long Id { get; set; }
         public string Nombre { get; set; }
-        public string Observacion { get; set; }
+        public long IdAlumno { get; set; }
+        public long IdComision { get; set; }
 
         public override string ToString()
         {

@@ -72,7 +72,9 @@
     <Content Include="AltaComision.aspx" />
     <Content Include="AltaDocente.aspx" />
     <Content Include="AltaMateria.aspx" />
+    <Content Include="AlumnosPorComision.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="ListarComision.aspx" />
     <Content Include="PaginaError.aspx" />
     <Content Include="PaginaExito.aspx" />
     <Content Include="PagPrincipal.aspx" />
@@ -114,8 +116,22 @@
     <Compile Include="AltaMateria.aspx.designer.cs">
       <DependentUpon>AltaMateria.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AlumnosPorComision.aspx.cs">
+      <DependentUpon>AlumnosPorComision.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AlumnosPorComision.aspx.designer.cs">
+      <DependentUpon>AlumnosPorComision.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="ListarComision.aspx.cs">
+      <DependentUpon>ListarComision.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListarComision.aspx.designer.cs">
+      <DependentUpon>ListarComision.aspx</DependentUpon>
     </Compile>
     <Compile Include="ModeloMaster.Master.cs">
       <DependentUpon>ModeloMaster.Master</DependentUpon>

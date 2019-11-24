@@ -12,11 +12,6 @@ namespace Dominio
         public Materia Materia { get; set; }
         public Turnos Turno { get; set; }
         public int Cuatrimestre { get; set; }
-        public int Año { get; set; }
-        public Carrera Carrera { get; set; }
-        public Instancia Instancia { get; set; }
-        public Alumnos Alumno { get; set; }
-        public Docentes Docente { get; set; }
-
+       
     }
 }
