@@ -5,9 +5,10 @@
 
     
 <asp:GridView id="dgvListaComision"
-     ShowHeaderWhenEmpty="true" ShowFooterWhenEmpty="true" OnRowEditing="dgvListaComision_RowEditing"
-    runat="server" AutoGenerateColumns="false" cssclass="table table-striped table-dark">
-
+     ShowHeaderWhenEmpty="true" ShowFooterWhenEmpty="true"
+    runat="server" AutoGenerateColumns="false" cssclass="table table-striped table-dark"
+     OnRowCommand="dgvListaComision_RowCommand">
+    
     <Columns>
          <asp:BoundField HeaderText="Nombre Comi" DataField="Nombre" />
          <asp:BoundField HeaderText="Materia" DataField="Materia" />
@@ -15,19 +16,10 @@
          <asp:BoundField HeaderText="Cuatrimestre" DataField="Cuatrimestre" />
          <asp:TemplateField HeaderText="Opcion">
                     <ItemTemplate>
-                        <asp:ImageButton ImageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjAmDB8_u7meopD9NGOVKxU55XyA7LvdERneW9DNO9FSBEt4M5qg&s" runat="server" CommandName="Edit" Tooltip="edit" width="20px" Height="20px"/>
-                        <asp:ImageButton ImageUrl="~/Images/borrar.png" runat="server" CommandName="Delete" Tooltip="delete" width="20px" Height="20px"/>
-                        </ItemTemplate>
-                    <EditItemTemplate>
-                       <asp:ImageButton ImageUrl="~/Images/guardar.png" runat="server" CommandName="Update" Tooltip="Update" width="20px" Height="20px"/>
-                       <asp:ImageButton ImageUrl="~/Images/cancelar.png" runat="server" CommandName="Cancel" Tooltip="Cancel" width="20px" Height="20px"/>
-                       
-                    </EditItemTemplate>
-                    <FooterTemplate>
-                         <asp:ImageButton ImageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjAmDB8_u7meopD9NGOVKxU55XyA7LvdERneW9DNO9FSBEt4M5qg&s" runat="server" CommandName="AddNew" Tooltip="AddNew" width="20px" Height="20px"/>
-                    </FooterTemplate>
-                    </asp:TemplateField>
-         
+                        <asp:Button ID="btnVer" runat="server" Text="Ver Alumnos" CssClass="btn btn-outline-info" CausesValidation="false" 
+                            CommandName="VerAlumnos" />
+            </ItemTemplate>
+             </asp:TemplateField>
           
     </Columns>
 

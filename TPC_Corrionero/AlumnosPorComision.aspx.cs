@@ -12,15 +12,16 @@ namespace TPC_Corrionero
 {
     public partial class AlumnosPorComision : System.Web.UI.Page
     {
+               public string NombreComision;
         protected void Page_Load(object sender, EventArgs e)
         {
 
             if (!IsPostBack)
             {
-                Comision comision = new Comision();
                 ComisionNegocio negocio = new ComisionNegocio();
-                
-                
+                long IdComision = Convert.ToInt64( Session["IdComision"]);
+                //NombreComision = negocio.NombreComision(IdComision);
+                //lblNombreComision.Text = NombreComision;
 
             }
         }

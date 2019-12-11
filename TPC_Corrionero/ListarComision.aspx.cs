@@ -18,18 +18,22 @@ namespace TPC_Corrionero
             {
             ComisionNegocio negocio = new ComisionNegocio();
             dgvListaComision.DataSource = negocio.listar();
-
             dgvListaComision.DataBind();
 
             }
         }
 
-        protected void dgvListaComision_RowEditing(object sender, GridViewEditEventArgs e)
+        protected void dgvListaComision_RowCommand(object sender, GridViewCommandEventArgs e)
         {
             
-            Session.Add("IdComision", e.NewEditIndex);
-            var algo =  Session["IdComision"];
+            if (e.CommandName == "VerAlumnos")
+            {
+                int index = Convert.ToInt32(e.CommandArgument);
 
+              //  long Id = Convert.ToInt64(dgvListaComision.DataKeys[index].Value);
+
+
+            }
         }
     }
 }
