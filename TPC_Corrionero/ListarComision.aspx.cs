@@ -25,13 +25,32 @@ namespace TPC_Corrionero
 
         protected void dgvListaComision_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-            
+
             if (e.CommandName == "VerAlumnos")
             {
                 int index = Convert.ToInt32(e.CommandArgument);
 
-              //  long Id = Convert.ToInt64(dgvListaComision.DataKeys[index].Value);
+                //Reference the GridView Row.
+                GridViewRow row = dgvListaComision.Rows[index];
 
+                long Id = Convert.ToInt64( row.Cells[0].Text);
+
+                Session.Add("IdComision", Id);
+                Response.Redirect("AlumnosPorComision.aspx");
+
+            }
+
+            if (e.CommandName == "AgregarAlumno")
+            {
+                int index = Convert.ToInt32(e.CommandArgument);
+
+                //Reference the GridView Row.
+                GridViewRow row = dgvListaComision.Rows[index];
+
+                long Id = Convert.ToInt64(row.Cells[0].Text);
+
+                Session.Add("IdComision", Id);
+                Response.Redirect("AgregarAlumnoComision.aspx");
 
             }
         }

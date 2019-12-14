@@ -42,5 +42,44 @@ namespace Negocio
                 accesoDatos.cerrarConexion();
             }
         }
+
+        public List<Alumnos> Listar()
+        {
+
+                AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                List<Alumnos> oAlu = new List<Alumnos>();
+                datos.setearQuery("Select Id, Dni, Apellido, Nombre, Legajo from Alumnos");
+                datos.ejecutarLector();
+                while (datos.lector.Read())
+                {
+                Alumnos alu = new Alumnos();
+                    alu.Id = datos.lector.GetInt64(0);
+                    alu.Dni = datos.lector.GetInt32(1);
+                    alu.Apellido = datos.lector.GetString(2);
+                    alu.Nombre = datos.lector.GetString(3);
+                    alu.Legajo = datos.lector.GetInt64(4);
+
+                    oAlu.Add(alu);
+                }
+
+                return oAlu;
+
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
     }
 }

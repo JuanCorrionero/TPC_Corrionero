@@ -20,11 +20,15 @@ namespace TPC_Corrionero
             {
                 ComisionNegocio negocio = new ComisionNegocio();
                 long IdComision = Convert.ToInt64( Session["IdComision"]);
-                //NombreComision = negocio.NombreComision(IdComision);
-                //lblNombreComision.Text = NombreComision;
+                NombreComision = negocio.NombreComision(IdComision);
+                lblNombreComision.Text = NombreComision;
 
             }
+
+
         }
+
+
 
 
 

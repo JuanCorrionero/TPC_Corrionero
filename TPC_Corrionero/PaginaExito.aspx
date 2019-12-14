@@ -8,7 +8,7 @@
 
         <div class="col-6">
 
-             <p><% = Session["Exito" + Session.SessionID] %></p>
+             <p><% = Session["Exito"] %></p>
             <a class="btn btn-primary" style="margin-left: 150px; margin-bottom: 15px;" href="PagPrincipal.aspx">Aceptar</a>
         </div>
         </div>

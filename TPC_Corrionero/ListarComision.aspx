@@ -10,6 +10,7 @@
      OnRowCommand="dgvListaComision_RowCommand">
     
     <Columns>
+        <asp:BoundField HeaderText="Id" DataField="Id" />
          <asp:BoundField HeaderText="Nombre Comi" DataField="Nombre" />
          <asp:BoundField HeaderText="Materia" DataField="Materia" />
          <asp:BoundField HeaderText="Turnos" DataField="Turno" />
@@ -17,9 +18,12 @@
          <asp:TemplateField HeaderText="Opcion">
                     <ItemTemplate>
                         <asp:Button ID="btnVer" runat="server" Text="Ver Alumnos" CssClass="btn btn-outline-info" CausesValidation="false" 
-                            CommandName="VerAlumnos" />
+                            CommandName="VerAlumnos" CommandArgument="<%# ((GridViewRow) Container).RowIndex %>" />
+                        <asp:Button ID="btnAgregar" runat="server" Text="Agregar Alumnos" CssClass="btn btn-outline-light" CausesValidation="false" 
+                            CommandName="AgregarAlumno" CommandArgument="<%# ((GridViewRow) Container).RowIndex %>" />
             </ItemTemplate>
              </asp:TemplateField>
+
           
     </Columns>
 

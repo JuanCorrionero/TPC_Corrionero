@@ -8,7 +8,7 @@ using Negocio;
 
 namespace Negocio
 {
-    class AlumnosXComisionNegocio
+    public class AlumnosXComisionNegocio
     {
 
         public bool Alta(long IdAlumno, long IdComision)

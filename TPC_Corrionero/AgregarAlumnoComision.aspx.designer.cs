@@ -10,24 +10,24 @@
 namespace TPC_Corrionero {
     
     
-    public partial class AlumnosPorComision {
+    public partial class AgregarAlumnoComision {
         
         /// <summary>
-        /// Control lblNombreComision.
+        /// Control lblComision.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNombreComision;
+        protected global::System.Web.UI.WebControls.Label lblComision;
         
         /// <summary>
-        /// Control dgvAlumnosPorComision.
+        /// Control dgvListaAlumnos.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView dgvAlumnosPorComision;
+        protected global::System.Web.UI.WebControls.GridView dgvListaAlumnos;
     }
 }

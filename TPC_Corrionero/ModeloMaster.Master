@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ModeloMaster.master.cs" Inherits="TPC_Corrionero.ModeloMaster" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ModeloMaster.master.cs" Inherits="TPC_Corrionero.ModeloMaster"  %>
 
 <!DOCTYPE html>
 
