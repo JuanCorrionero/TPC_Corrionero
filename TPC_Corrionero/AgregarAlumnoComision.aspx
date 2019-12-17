@@ -15,6 +15,7 @@
         AutoGenerateColumns="false"
          runat="server" OnRowCommand="dgvListaAlumnos_RowCommand">
         <Columns>
+            <asp:BoundField HeaderText="Id" DataField="Id" />
             <asp:BoundField HeaderText="Legajo" DataField="Legajo" />
             <asp:BoundField HeaderText="Dni" DataField="Dni" />
             <asp:BoundField HeaderText="Apellido" DataField="Apellido" />

@@ -23,6 +23,11 @@ namespace TPC_Corrionero
                 NombreComision = negocio.NombreComision(IdComision);
                 lblNombreComision.Text = NombreComision;
 
+                AlumnosXComisionNegocio nego = new AlumnosXComisionNegocio();
+
+                dgvAlumnosPorComision.DataSource = nego.listar(IdComision);
+                dgvAlumnosPorComision.DataBind();
+
             }
 
 

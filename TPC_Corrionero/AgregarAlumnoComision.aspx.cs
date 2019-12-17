@@ -41,10 +41,20 @@ namespace TPC_Corrionero
 
                 long Id = Convert.ToInt64(row.Cells[0].Text);
                 AlumnosXComisionNegocio AluCoNegocio = new AlumnosXComisionNegocio();
-                AluCoNegocio.Alta(Id, Convert.ToInt64(Session["IdComision"]));
+                if(AluCoNegocio.Alta(Id, Convert.ToInt64(Session["IdComision"])))
+                {
                 string exito = "El alumno fue agregado en al comisión con exito!";
                 Session.Add("Exito", exito );
                 Response.Redirect("PaginaExito.aspx");
+
+                }
+
+                else
+                {
+                    string error = "Hubo un error agregando el alumno a la comision";
+                    Session.Add("Error", error);
+                    Response.Redirect("PaginaError.aspx");
+                }
 
             }
         }
