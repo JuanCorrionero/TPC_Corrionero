@@ -81,5 +81,33 @@ namespace Negocio
             }
         }
 
+        string Nombre;
+        public string ApellidoAlumno(long Id)
+        {
+                Alumnos oAlumno = new Alumnos();
+                AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearQuery("Select Apellido from Alumnos where @Id = Id");
+                datos.agregarParametro("@Id", Id);
+                datos.ejecutarLector();
+                while (datos.lector.Read())
+                {
+                     Nombre = datos.lector.GetString(0);
+                }
+                return Nombre;
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
     }
 }

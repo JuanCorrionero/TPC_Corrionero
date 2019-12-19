@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AgregarAlumnoComision.aspx" />
+    <Content Include="AgregarInstancia.aspx" />
     <Content Include="AltaAlumno.aspx" />
     <Content Include="AltaCarrera.aspx" />
     <Content Include="AltaComision.aspx" />
@@ -75,6 +76,7 @@
     <Content Include="AltaMateria.aspx" />
     <Content Include="AlumnosPorComision.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="InstanciaPorComision.aspx" />
     <Content Include="ListarComision.aspx" />
     <Content Include="PaginaError.aspx" />
     <Content Include="PaginaExito.aspx" />
@@ -88,6 +90,13 @@
     </Compile>
     <Compile Include="AgregarAlumnoComision.aspx.designer.cs">
       <DependentUpon>AgregarAlumnoComision.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarInstancia.aspx.cs">
+      <DependentUpon>AgregarInstancia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgregarInstancia.aspx.designer.cs">
+      <DependentUpon>AgregarInstancia.aspx</DependentUpon>
     </Compile>
     <Compile Include="AltaAlumno.aspx.cs">
       <DependentUpon>AltaAlumno.aspx</DependentUpon>
@@ -133,6 +142,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="InstanciaPorComision.aspx.cs">
+      <DependentUpon>InstanciaPorComision.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InstanciaPorComision.aspx.designer.cs">
+      <DependentUpon>InstanciaPorComision.aspx</DependentUpon>
     </Compile>
     <Compile Include="ListarComision.aspx.cs">
       <DependentUpon>ListarComision.aspx</DependentUpon>

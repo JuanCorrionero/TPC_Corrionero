@@ -33,9 +33,21 @@ namespace TPC_Corrionero
 
         }
 
+        protected void dgvAlumnosPorComision_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName == "VerInstancia")
+            {
+                int index = Convert.ToInt32(e.CommandArgument);
 
+                //Reference the GridView Row.
+                GridViewRow row = dgvAlumnosPorComision.Rows[index];
 
+                long Id = Convert.ToInt64(row.Cells[0].Text);
 
+                Session.Add("IdAlumno", Id);
+                Response.Redirect("InstanciaPorComision.aspx");
 
+            }
+        }
     }
 }
