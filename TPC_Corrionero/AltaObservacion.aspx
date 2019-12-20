@@ -7,7 +7,7 @@
     <h2>Escriba la observacion de la instancia evaluativa: </h2>
     <br />
 
-    <asp:TextBox ID="txtDescripcion" CssClass="form form-control" runat="server"></asp:TextBox>
+    <asp:TextBox ID="txtDescripcion"  Width="300px" CssClass="form form-control" runat="server"></asp:TextBox>
 
     <br />
     <asp:Button ID="btnAceptar" CssClass="btn btn-outline-success" OnClick="btnAceptar_Click" runat="server" Text="Aceptar" />
