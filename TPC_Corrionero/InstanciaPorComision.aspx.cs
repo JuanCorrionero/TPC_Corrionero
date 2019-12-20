@@ -27,7 +27,11 @@ namespace TPC_Corrionero
                 AlumnosNegocio nego = new AlumnosNegocio();
                 NombreAlumno = nego.ApellidoAlumno(Convert.ToInt64(Session["IdAlumno"]));
                 lblAlumno.Text = NombreAlumno;
-                
+
+                long IdAlumno = Convert.ToInt64(Session["IdAlumno"]);
+                    InstanciaNegocio negocioInsta = new InstanciaNegocio();
+                    dgvListaInstancias.DataSource = negocioInsta.listar(IdComision, IdAlumno);
+                    dgvListaInstancias.DataBind();
                 
             }
             

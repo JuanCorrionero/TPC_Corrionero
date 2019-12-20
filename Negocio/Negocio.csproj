@@ -49,6 +49,7 @@
     <Compile Include="DocentesNegocio.cs" />
     <Compile Include="InstanciaNegocio.cs" />
     <Compile Include="MateriaNegocio.cs" />
+    <Compile Include="ObservacionesNegocio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TurnosNegocio.cs" />
     <Compile Include="UsuariosNegocio.cs" />

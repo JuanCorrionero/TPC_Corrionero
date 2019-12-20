@@ -13,4 +13,22 @@
     <asp:Button ID="btnAgregar" CssClass="btn btn-outline-secondary" runat="server" Text="Agregar Instancia" OnClick="btnAgregar_Click" />
 
     </div>
+    <br />
+    <div>
+
+                    <asp:GridView ID="dgvListaInstancias" ShowHeaderWhenEmpty="true" CssClass="table table-striped table-secondary"
+        AutoGenerateColumns="false"
+         runat="server" >
+        <Columns>
+            <asp:BoundField HeaderText="Id" DataField="Id" />
+            <asp:BoundField HeaderText="Nombre Instancia" DataField="Nombre" />
+            <asp:TemplateField HeaderText="Opcion">
+                    <ItemTemplate>
+                        <asp:Button ID="btnAgregar" runat="server" Text="Ver observaciones"  CssClass="btn btn-outline-info" CausesValidation="False" 
+                            CommandName="Agregar" CommandArgument="<%# ((GridViewRow) Container).RowIndex %>" />
+            </ItemTemplate>
+             </asp:TemplateField>
+        </Columns>
+    </asp:GridView>
+    </div>
 </asp:Content>
