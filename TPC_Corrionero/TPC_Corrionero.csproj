@@ -74,10 +74,12 @@
     <Content Include="AltaComision.aspx" />
     <Content Include="AltaDocente.aspx" />
     <Content Include="AltaMateria.aspx" />
+    <Content Include="AltaObservacion.aspx" />
     <Content Include="AlumnosPorComision.aspx" />
     <Content Include="Global.asax" />
     <Content Include="InstanciaPorComision.aspx" />
     <Content Include="ListarComision.aspx" />
+    <Content Include="Observaciones.aspx" />
     <Content Include="PaginaError.aspx" />
     <Content Include="PaginaExito.aspx" />
     <Content Include="PagPrincipal.aspx" />
@@ -133,6 +135,13 @@
     <Compile Include="AltaMateria.aspx.designer.cs">
       <DependentUpon>AltaMateria.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AltaObservacion.aspx.cs">
+      <DependentUpon>AltaObservacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AltaObservacion.aspx.designer.cs">
+      <DependentUpon>AltaObservacion.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AlumnosPorComision.aspx.cs">
       <DependentUpon>AlumnosPorComision.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -163,6 +172,13 @@
     </Compile>
     <Compile Include="ModeloMaster.Master.designer.cs">
       <DependentUpon>ModeloMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Observaciones.aspx.cs">
+      <DependentUpon>Observaciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Observaciones.aspx.designer.cs">
+      <DependentUpon>Observaciones.aspx</DependentUpon>
     </Compile>
     <Compile Include="PaginaError.aspx.cs">
       <DependentUpon>PaginaError.aspx</DependentUpon>

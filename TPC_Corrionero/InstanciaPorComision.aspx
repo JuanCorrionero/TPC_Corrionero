@@ -18,7 +18,7 @@
 
                     <asp:GridView ID="dgvListaInstancias" ShowHeaderWhenEmpty="true" CssClass="table table-striped table-secondary"
         AutoGenerateColumns="false"
-         runat="server" >
+         runat="server" OnRowCommand="dgvListaInstancias_RowCommand" >
         <Columns>
             <asp:BoundField HeaderText="Id" DataField="Id" />
             <asp:BoundField HeaderText="Nombre Instancia" DataField="Nombre" />
