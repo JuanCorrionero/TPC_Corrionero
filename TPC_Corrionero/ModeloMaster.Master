@@ -10,23 +10,55 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <asp:ContentPlaceHolder ID="head" runat="server">
 
+
     </asp:ContentPlaceHolder>
+        <style>
+
+            .contenedor{
+                width: 80%;
+                margin: auto;
+
+            }
+
+            .btnNav{
+                text-decoration-line: none;
+                margin: 0.5%;
+                padding: 5px 5px 5px;
+                background-color: lightgoldenrodyellow;
+                border: 1px solid black;
+                border-radius: 5px 15px;
+                color: darkslategrey;
+            }
+
+            .btnNav:hover{
+                background-color: darkkhaki;
+                border: 1px solid black;
+            }
+
+            a:hover{
+                text-decoration: none;
+                text-decoration-color: none;
+                text-decoration-line: none;
+                color: lightblue;
+            }
+
+        </style>
 </head>
 
 <body>
     <form id="form1" runat="server">
 
-                    <div class="container">
-        <div style="background-color:black;color:black;">
+                    <div class="contenedor">
+        <div>
 
         <nav class="nav">
-            <a class="nav-link active;" href="PagPrincipal.aspx">Página Principal</a>
-            <a class="nav-link active" href="AltaAlumno.aspx">Inscribir Alumno</a>
-            <a class="nav-link active"  href="AltaDocente.aspx">Inscribir Docente</a>
-            <a class="nav-link active" href="AltaCarrera.aspx">Agregar Carrera</a>
-            <a class="nav-link active" href="AltaMateria.aspx">Agregar Materia</a>
-            <a class="nav-link active" href="AltaComision.aspx">Agregar Comision</a>
-            <a class="nav-link active" href="ListarComision.aspx">Listar Comisiones</a>
+            <a class="btnNav" href="PagPrincipal.aspx">Página Principal</a>
+            <a class="btnNav" href="AltaAlumno.aspx">Inscribir Alumno</a>
+            <a class="btnNav"  href="AltaDocente.aspx">Inscribir Docente</a>
+            <a class="btnNav" href="AltaCarrera.aspx">Agregar Carrera</a>
+            <a class="btnNav" href="AltaMateria.aspx">Agregar Materia</a>
+            <a class="btnNav" href="AltaComision.aspx">Agregar Comision</a>
+            <a class="btnNav" href="ListarComision.aspx">Listar Comisiones</a>
 
         </nav>
         

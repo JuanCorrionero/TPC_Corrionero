@@ -2,6 +2,13 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
+    <div class="container">
+        <div style="background-color:black;color:white;">
+            <h1>Alta de materia</h1>
+            <br />
+        </div>
+
     <br />
     <div class="container">
         <div class="row">

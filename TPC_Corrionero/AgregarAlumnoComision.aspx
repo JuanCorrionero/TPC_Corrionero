@@ -3,6 +3,13 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <br />
+
+    <div class="container">
+        <div style="background-color:black;color:white;">
+            <h1>Agregue los alumnos a la comision</h1>
+            <br />
+        </div>
+
     <center>
         <h1>
             <asp:label text="Comisión: " runat="server" />

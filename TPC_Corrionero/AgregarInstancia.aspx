@@ -3,8 +3,11 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <br />
-    <h1>Alta de instancia evaluativa</h1>
-    <br />
+<div class="container">
+        <div style="background-color:black;color:white;">
+            <h1>Ingrese el nombre de la instancia evaluativa</h1>
+            <br />
+        </div>    <br />
 
     <div class="container">
 
