@@ -3,32 +3,61 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <div class="container">
-        <div style="background-color:black;color:white;">
-            <h1>Ingrese los datos de la comision</h1>
-            <br />
-        </div>
+     <style>
+        .Ingresos{
+            color: darkslategrey;
+            background-color: #FDDB78;
+            text-align: center;
+            border: 1px solid black;
+            border-radius: 30px 15px;
+            padding: 15px;
+            width:60%;
+            margin: auto;
+        }
 
-    <br />
+        hr{
+            width:90%;
+        }
+
+        .container{
+            margin:auto;
+        }
+        .cajita{
+            margin-right: 10px;
+        }
+
+        label{
+            color: lightgray;
+            font-family: 'Times New Roman';
+        }
+
+    </style>
+
+            <h2 class="Ingresos">
+            Ingrese los datos de la comisión.
+        </h2>
+        <hr />
+
 
     <div class="container">
         <div class="row">
             <div class="col-4">
+                <asp:Label Text="Nombre de la Comision:" runat="server" />
             <asp:TextBox ID="txtNombre" CssClass="form-control" placeholder="Nombre de la Comision" runat="server"></asp:TextBox>
                 <br />
-                <span>
-                    <asp:Label ID="lblMateria" runat="server" Text="Materia: "></asp:Label></span>
-                <asp:DropDownList ID="dwMateria" runat="server"></asp:DropDownList>
+                    <asp:Label ID="lblMateria"  runat="server" Text="Materia: "></asp:Label></span>
+                <asp:DropDownList ID="dwMateria" CssClass="form-control" runat="server"></asp:DropDownList>
             </div>
                </div>
         <br />
         <div class="row">
             <div class="col-2">
+                <asp:Label Text="Cuatrimestre" runat="server" />
                     <asp:TextBox ID="txtCuatrimestre" placeholder="Cuatrimestre"  CssClass="form-control" runat="server"></asp:TextBox>
                 <br />
                 <span>
                     <asp:Label ID="lblTurnos" runat="server" Text="Turno: "></asp:Label></span>
-                <asp:DropDownList ID="dwTurnos" runat="server"></asp:DropDownList>
+                <asp:DropDownList ID="dwTurnos" CssClass="form-control" runat="server"></asp:DropDownList>
                </div>
 
         </div>

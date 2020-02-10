@@ -3,14 +3,35 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="container"> 
-        <div style="background-color:black;color:white;padding:20px;">
-        <h2>
+    <style>
+        .Ingresos{
+            color: darkslategrey;
+            background-color: #B5F337;
+            text-align: center;
+            border: 1px solid black;
+            border-radius: 30px 15px;
+            padding: 15px;
+            width:60%;
+            margin: auto;
+        }
+
+        hr{
+            width:90%;
+        }
+
+        .container{
+            margin:auto;
+        }
+
+    </style>
+
+            <h2 class="Ingresos">
             Ingrese los datos del docente.
         </h2>
-  
-</div>
         <hr />
+
+    <div class="container">
+
 
         <div class="row">
             <%-- Texto Nombre y apellido --%>
