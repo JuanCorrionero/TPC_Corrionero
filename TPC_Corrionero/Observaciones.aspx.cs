@@ -32,5 +32,10 @@ namespace TPC_Corrionero
         {
             Response.Redirect("AltaObservacion.aspx");
         }
+
+        protected void btnVolver_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("InstanciaPorComision.aspx");
+        }
     }
 }

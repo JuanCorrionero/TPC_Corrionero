@@ -6,7 +6,7 @@
      <style>
         .Ingresos{
             color: darkslategrey;
-            background-color: #FDDB78;
+            background-color: #40D7FC;
             text-align: center;
             border: 1px solid black;
             border-radius: 30px 15px;

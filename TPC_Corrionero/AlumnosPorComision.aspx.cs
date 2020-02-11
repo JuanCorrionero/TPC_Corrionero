@@ -49,5 +49,11 @@ namespace TPC_Corrionero
 
             }
         }
+        
+
+        protected void BotonVolver_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ListarComision.aspx");
+        }
     }
 }

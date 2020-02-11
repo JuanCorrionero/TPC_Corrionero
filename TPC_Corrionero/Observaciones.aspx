@@ -2,7 +2,27 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <style>
+        .container{
+            width: 80%;
+        }
+
+        .botonVolver{
+            float: right;
+        }
+
+    </style>
+
     <br />
+
+    <div class="container">
+
+        <div class="botonVolver">
+
+            <asp:Button ID="btnVolver" CssClass="btn btn-outline-dark" runat="server" Text="Volver" OnClick="btnVolver_Click" />
+        </div>
+
+
     <h2>
     
         <asp:Label ID="LblComision" Text="" runat="server" />  
@@ -45,4 +65,5 @@
         </Columns>
     </asp:GridView>
 
+    </div>
 </asp:Content>

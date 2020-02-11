@@ -3,12 +3,48 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <Center>
-    <h2>
-        <asp:label text="Comisión: " runat="server" />
+        <style>
+
+        .container{
+            width: 80%;
+        }
+
+        .titulo{
+
+            
+            border: 1px solid black;
+            border-radius: 25px 10px;
+            background-color: darkslategrey;
+            color: lightblue;
+            width: auto;
+            padding: 10px;
+
+        }
+
+
+
+
+    </style>
+
+    <div class="container" >
+
+
+    <h2 class="titulo">
+        <asp:label text="Comisión: " CssClass="txtTitulo" runat="server" />
     <asp:Label ID="lblNombreComision" runat="server" Text=""></asp:Label>
     </h2>
-    </Center>
+    
+        <br />
+
+        <div style="float: right;">
+        <asp:Button ID="BotonVolver" Text="Volver" CssClass="btn btn-outline-secondary" OnClick="BotonVolver_Click" runat="server" />
+        </div>
+
+        <br />
+        </div>
+
+        <div class="container">
+            <br />
 
     <asp:GridView ID="dgvAlumnosPorComision" cssclass="table table-striped table-dark" AutoGenerateColumns="false" runat="server" OnRowCommand="dgvAlumnosPorComision_RowCommand">
         <Columns>
@@ -28,9 +64,10 @@
 
         </Columns>
     </asp:GridView>
-    <br />
+    
 
     
 
+    </div>
     
 </asp:Content>
