@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ModeloMaster.Master" AutoEventWireup="true" CodeBehind="AltaAlumno.aspx.cs" Inherits="TPC_Corrionero.AltaAlumno" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <style>
@@ -23,6 +24,8 @@
         }
 
     </style>
+
+
         <h2 class="Ingresos">
             Ingrese los datos del alumno.
         </h2>
@@ -30,21 +33,33 @@
         <hr />
 
 
-    <div class="container">
+    <div class="container-fluid">
 
         <div class="row">
             <%-- Texto Nombre y apellido --%>
             <div class="col-3">
+                <span>
 
-                <asp:TextBox ID="txtNombre" CssClass="form-control" placeholder="Nombre" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtNombre" CssClass="form-control" placeholder="Nombre"  runat="server"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="ReqValNombre" runat="server" ErrorMessage="Requiere completar" ControlToValidate="txtNombre"></asp:RequiredFieldValidator>
+                <asp:RegularExpressionValidator ID="RegExpValNombre" runat="server" ErrorMessage="El nombre sólamente debe contener letras." ControlToValidate="txtNombre" ValidationExpression="^[a-zA-Z ]*$"></asp:RegularExpressionValidator>
+                </span>
                 <br />
+                <span>
+
                 <asp:TextBox ID="txtApellido" CssClass="form-control" placeholder="Apellido" runat="server"></asp:TextBox>
-
+                <asp:RequiredFieldValidator ID="ReqApellido" runat="server" ControlToValidate="txtApellido" ErrorMessage="Requiere completar"></asp:RequiredFieldValidator>
+                <asp:RegularExpressionValidator ID="RegExpValApellido" runat="server" ControlToValidate="txtApellido" ValidationExpression="^[a-zA-Z ]*$" ErrorMessage="El apellido sólamente debe contener letras"></asp:RegularExpressionValidator>
+                </span>
                 <br />
+
+                <span>
 
                 <asp:TextBox ID="txtLegajo" CssClass="form-control" placeholder="Legajo" runat="server"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="ReqValLegajo" runat="server" ControlToValidate="txtLegajo" ErrorMessage="Requiere completar"></asp:RequiredFieldValidator>
+                <asp:RegularExpressionValidator ID="RegExpValLegajo" runat="server" ControlToValidate="txtLegajo" ErrorMessage="Sólamente debe contener números" ValidationExpression="\d+"></asp:RegularExpressionValidator>
+                </span>
                 <br />
-                <asp:Button ID="btnAceptar" CssClass="btn btn-outline-dark" runat="server" Text="Aceptar" OnClick="btnAceptar_Click" />
 
                 </div>
            
@@ -57,14 +72,22 @@
 
 
                 <asp:TextBox ID="txtDni" CssClass="form-control" placeholder="Documento" runat="server"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="ReqDni" runat="server" ControlToValidate="txtDni" ErrorMessage="Requiere completar"></asp:RequiredFieldValidator>
+                <asp:RegularExpressionValidator ID="RegExpValDni" runat="server" ControlToValidate="txtDni" ErrorMessage="Sólamente debe contener números" ValidationExpression="\d+"></asp:RegularExpressionValidator>
+
                 <br />
                 <asp:TextBox ID="txtMail" CssClass="form-control" placeholder="E-mail" runat="server"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="ReqMail" runat="server" ErrorMessage="Requiere completar" ControlToValidate="txtMail"></asp:RequiredFieldValidator>
+                <asp:RegularExpressionValidator ID="RegExpValMail" runat="server" ErrorMessage="Ingresar mail de forma correcta." ControlToValidate="txtMail" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+
                         </div>
                      <div class="col-6">
                 <asp:TextBox ID="txtTelefono" CssClass="form-control" placeholder="Telefono" runat="server"></asp:TextBox>
+                          <asp:RequiredFieldValidator ID="reqTelefono" runat="server" ControlToValidate="txtTelefono" ErrorMessage="Requiere completar"></asp:RequiredFieldValidator>
+                <asp:RegularExpressionValidator ID="RegExpValTelefono" runat="server" ControlToValidate="txtTelefono" ErrorMessage="Sólamente debe contener números" ValidationExpression="\d+"></asp:RegularExpressionValidator>
                          <br />
                 <asp:TextBox ID="txtDireccion" CssClass="form-control" placeholder="Direccion" runat="server"></asp:TextBox>
-
+                <asp:RequiredFieldValidator ID="RegDireccion" runat="server" ErrorMessage="Requiere completar" ControlToValidate="txtDireccion"></asp:RequiredFieldValidator>
 
                      </div>
 
@@ -72,6 +95,7 @@
 
     </div>
 
+                <asp:Button ID="btnAceptar" CssClass="btn btn-outline-dark" runat="server" Text="Aceptar" OnClick="btnAceptar_Click" />
 
         </div>
 

@@ -18,6 +18,7 @@
 
         <asp:Label ID="lblInst" CssClass="text-capitalize" runat="server" Text="Ingrese el nombre de la Instancia Evaluativa: "></asp:Label>
             <asp:TextBox ID="txtInstancia" CssClass="form-control" runat="server"  Width="350px" ></asp:TextBox>
+            <asp:RequiredFieldValidator ID="ReqApellido" runat="server" ControlToValidate="txtInstancia" ErrorMessage="Requiere completar"></asp:RequiredFieldValidator>
             </span>
 
         </div>

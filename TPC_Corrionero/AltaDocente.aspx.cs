@@ -13,16 +13,17 @@ namespace TPC_Corrionero
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Page.UnobtrusiveValidationMode = System.Web.UI.UnobtrusiveValidationMode.None;
         }
 
-       // TODO: Hacer la pagina principal con navegacion para crear un alumno y un docente - ok
-       // TODO: Luego poder asignarle una comision para poder crearle una instancia y poder agregarle cmentarios.
-       // TODO: Diseñar la pagina principal - login a lo ultimo, y sus validaciones
-       // TODO: 
 
         protected void btnAceptar_Click(object sender, EventArgs e)
         {
+            //Antes de agregar al docente, verifica las validaciones
+            Page.Validate();
+            if (!Page.IsValid)
+                return;
+
             Docentes docente = new Docentes();
             docente.Nombre = txtNombre.Text;
             docente.Apellido = txtApellido.Text;

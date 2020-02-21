@@ -38,6 +38,7 @@
             
             <div class="cajita">
             <asp:TextBox ID="txtMateria" CssClass="form-control"  placeholder="Nombre Materia" runat="server"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="ReqApellido" runat="server" ControlToValidate="txtMateria" ErrorMessage="Requiere completar"></asp:RequiredFieldValidator>
             </div>
 
             <div class="cajita">
@@ -45,8 +46,8 @@
             <asp:DropDownList ID="dropDownCarrera" Cssclass="form-control" runat="server"></asp:DropDownList>
             </div>
             <br />
-            <asp:Button CssClass="btn btn-dark" ID="btnAgregar" runat="server" Text="Agregar" OnClick="btnAgregar_Click" />
         </div>
+            <asp:Button CssClass="btn btn-dark" ID="btnAgregar" runat="server" Text="Agregar" OnClick="btnAgregar_Click" />
 
     </div>
 

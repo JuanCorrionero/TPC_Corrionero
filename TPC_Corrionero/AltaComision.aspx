@@ -44,6 +44,7 @@
             <div class="col-4">
                 <asp:Label Text="Nombre de la Comision:" runat="server" />
             <asp:TextBox ID="txtNombre" CssClass="form-control" placeholder="Nombre de la Comision" runat="server"></asp:TextBox>
+        <asp:RequiredFieldValidator ID="ReqApellido" runat="server" ControlToValidate="txtNombre" ErrorMessage="Requiere completar"></asp:RequiredFieldValidator>
                 <br />
                     <asp:Label ID="lblMateria"  runat="server" Text="Materia: "></asp:Label></span>
                 <asp:DropDownList ID="dwMateria" CssClass="form-control" runat="server"></asp:DropDownList>

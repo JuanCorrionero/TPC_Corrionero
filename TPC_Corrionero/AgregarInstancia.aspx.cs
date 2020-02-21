@@ -14,12 +14,18 @@ namespace TPC_Corrionero
         protected void Page_Load(object sender, EventArgs e)
         {
 
+            Page.UnobtrusiveValidationMode = System.Web.UI.UnobtrusiveValidationMode.None;
 
 
         }
 
         protected void btnAceptar_Click(object sender, EventArgs e)
         {
+            //Antes de agregar al docente, verifica las validaciones
+            Page.Validate();
+            if (!Page.IsValid)
+                return;
+
             Instancia oInstancia = new Instancia();
             oInstancia.Nombre = txtInstancia.Text;
             oInstancia.IdAlumno = Convert.ToInt64(Session["IdAlumno"]);

@@ -13,11 +13,16 @@ namespace TPC_Corrionero
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            Page.UnobtrusiveValidationMode = System.Web.UI.UnobtrusiveValidationMode.None;
         }
 
         protected void btnAceptar_Click(object sender, EventArgs e)
         {
+
+            Page.Validate();
+            if(!Page.IsValid)
+                 return;
+
             Alumnos alumno = new Alumnos();
             alumno.Nombre = txtNombre.Text;
             alumno.Apellido = txtApellido.Text;

@@ -14,11 +14,7 @@
     </asp:ContentPlaceHolder>
         <style>
 
-            .contenedor{
-                width: 80%;
-                margin: auto;
-
-            }
+            
 
             .btnNav{
                 text-decoration-line: none;
@@ -48,7 +44,7 @@
 <body>
     <form id="form1" runat="server">
 
-                    <div class="contenedor">
+                    <div class="container">
         <div>
 
         <nav class="nav">

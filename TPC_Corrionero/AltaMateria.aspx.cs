@@ -13,6 +13,8 @@ namespace TPC_Corrionero
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Page.UnobtrusiveValidationMode = System.Web.UI.UnobtrusiveValidationMode.None;
+
             CarreraNegocio carreraNegocio = new CarreraNegocio();
 
             if (!IsPostBack)
@@ -27,6 +29,10 @@ namespace TPC_Corrionero
 
         protected void btnAgregar_Click(object sender, EventArgs e)
         {
+            //Antes de agregar al docente, verifica las validaciones
+            Page.Validate();
+            if (!Page.IsValid)
+                return;
 
             Materia materia = new Materia();
             Carrera carrera = new Carrera();

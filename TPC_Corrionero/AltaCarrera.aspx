@@ -37,6 +37,8 @@
 
         
         <asp:TextBox ID="txtNombre" CssClass="form-control" runat="server" placeholder="Carrera"></asp:TextBox>
+        <asp:RequiredFieldValidator ID="ReqApellido" runat="server" ControlToValidate="txtNombre" ErrorMessage="Requiere completar"></asp:RequiredFieldValidator>
+        <asp:RegularExpressionValidator ID="RegExpValApellido" runat="server" ControlToValidate="txtNombre" ValidationExpression="^[a-zA-Z ]*$" ErrorMessage="El apellido sólamente debe contener letras"></asp:RegularExpressionValidator>
         <br />
         <asp:Button ID="btnAceptar" CssClass="btn btn-outline-dark" runat="server" Text="Aceptar" OnClick="btnAceptar_Click" />
 
