@@ -13,7 +13,9 @@ namespace TPC_Corrionero
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Docentes docenteLogeado = new Docentes();
+            docenteLogeado = null;
+            Session.Add("docenteLogeado", docenteLogeado);
         }
 
         protected void btnEntrar_Click(object sender, EventArgs e)
@@ -23,6 +25,9 @@ namespace TPC_Corrionero
             string pass = txtPass.Text;
             if (negocio.docenteLogin(legajo, pass))
             {
+                Docentes docenteLogeado = new Docentes();
+                docenteLogeado = negocio.traerDocente(legajo);
+                Session.Add("docenteLogeado", docenteLogeado);
                 Response.Redirect("PagPrincipal.aspx");
             }
             else

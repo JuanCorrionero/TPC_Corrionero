@@ -84,5 +84,46 @@ namespace Negocio
             }
         }
 
+        public Docentes traerDocente(long legajo)
+        {
+                AccesoDatos datos = new AccesoDatos();
+            try
+            {
+
+
+                datos.setearQuery("Select Id, Nombre, Apellido, Dni, Email, Telefono, Direccion, Legajo, admin from Docentes where Legajo = @legajo");
+                datos.agregarParametro("@Legajo", legajo);
+                datos.ejecutarLector();
+                Docentes docente = new Docentes();
+
+                while (datos.lector.Read())
+                {
+                    docente.Id = datos.lector.GetInt64(0);
+                    docente.Nombre = datos.lector.GetString(1);
+                    docente.Apellido = datos.lector.GetString(2);
+                    docente.Dni = datos.lector.GetInt32(3);
+                    docente.Mail = datos.lector.GetString(4);
+                    docente.Telefono = datos.lector.GetInt32(5);
+                    docente.Direccion = datos.lector.GetString(6);
+                    docente.Legajo = datos.lector.GetInt64(7);
+                    docente.admin = datos.lector.GetBoolean(8);
+                                 
+                }
+
+                return docente;
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
     }
 }
