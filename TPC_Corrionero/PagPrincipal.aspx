@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ModeloMaster.Master" AutoEventWireup="true" CodeBehind="PagPrincipal.aspx.cs" Inherits="TPC_Corrionero.PagPrincipal" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
         
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -31,7 +32,8 @@
     <a href="AltaAlumno.aspx" class="btn btn-primary">Agregar Alumno</a>
   </div>
 </div>
-
+           <%-- <% if (((Docente)Session["usuarioLogueado"]).Admin) {
+                } %>--%>
         <div class="card"style="width: 18rem;" >
   <img src="https://png.pngtree.com/svg/20141030/teacher_837945.png" class="card-img-top" alt="...">
   <div class="card-body">
@@ -40,6 +42,7 @@
     <a href="AltaDocente.aspx" class="btn btn-primary">Agregar Docente</a>
   </div>
 </div>
+
 
             <div class="card" style="width: 18rem;">
   <img src="https://icons-for-free.com/iconfiles/png/512/livejournal+material+network+social+icon-1320184945316485471.png" class="card-img-top" alt="...">

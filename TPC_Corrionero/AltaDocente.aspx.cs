@@ -29,9 +29,20 @@ namespace TPC_Corrionero
             docente.Apellido = txtApellido.Text;
             docente.Dni = Convert.ToInt32(txtDni.Text);
             docente.Mail = txtMail.Text;
+            docente.Password = txtPass.Text;
             docente.Telefono = Convert.ToInt32(txtTelefono.Text);
             docente.Direccion = txtDireccion.Text;
             docente.Legajo = Convert.ToInt64(txtLegajo.Text);
+
+            if(chkLogin.Checked == true)
+            {
+                docente.admin = true;
+            }
+            else
+            {
+                docente.admin = false;
+            }
+
             DocentesNegocio negocioDocente = new DocentesNegocio();
             if (negocioDocente.altaDocente(docente) == true)
             {

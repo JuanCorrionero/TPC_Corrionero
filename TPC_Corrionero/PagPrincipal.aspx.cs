@@ -11,6 +11,18 @@ namespace TPC_Corrionero
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //object usuarioLogueado = Session["usuarioLogueado"];
+            //if (usuarioLogueado != null)
+            //{
+            //    if (!usuarioLogueado.Admin)
+            //    {
+
+            //    }
+            //}
+
+
+            //// cuando te loguees si esta todo ok vas a hacer
+            //Session.Add("usuarioLogueado", new object());
 
         }
     }

@@ -50,6 +50,10 @@
                 <asp:RequiredFieldValidator ID="ReqValLegajo" runat="server" ControlToValidate="txtLegajo" ErrorMessage="Requiere completar"></asp:RequiredFieldValidator>
                 <asp:RegularExpressionValidator ID="RegExpValLegajo" runat="server" ControlToValidate="txtLegajo" ErrorMessage="Sólamente debe contener números" ValidationExpression="\d+"></asp:RegularExpressionValidator>
                 <br />
+                <asp:TextBox ID="txtPass" CssClass="form-control" type="password" placeholder="Contraseña" runat="server"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Requiere completar" ControlToValidate="txtPass"></asp:RequiredFieldValidator>
+                <br />
+
                 <asp:Button ID="btnAceptar" CssClass="btn btn-outline-dark" runat="server" Text="Aceptar" OnClick="btnAceptar_Click" />
 
                 </div>
@@ -77,6 +81,8 @@
                          <br />
                 <asp:TextBox ID="txtDireccion" CssClass="form-control" placeholder="Direccion" runat="server"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="RegDireccion" runat="server" ErrorMessage="Requiere completar" ControlToValidate="txtDireccion"></asp:RequiredFieldValidator>
+
+                <asp:CheckBox ID="chkLogin" class="form-check-label" text="Es admin?" runat="server" />
 
                      </div>
 

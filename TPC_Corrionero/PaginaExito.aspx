@@ -9,7 +9,7 @@
         <div class="col-6">
 
              <p><% = Session["Exito"] %></p>
-            <a class="btn btn-primary" style="margin-left: 150px; margin-bottom: 15px;" href="PagPrincipal.aspx">Aceptar</a>
+            <a class="btn btn-primary" style="margin-left: 150px; margin-bottom: 15px;" href="Login.aspx">Aceptar</a>
         </div>
         </div>
     </div>

@@ -16,7 +16,7 @@ namespace Negocio
 
             try
             {
-                accesoDatos.setearQuery("insert into Alumnos values(@Nombre, @Apellido, @Dni, @Email, @Telefono, @Direccion, @Legajo)");
+                accesoDatos.setearQuery("insert into Docentes values(@Nombre, @Apellido, @Dni, @Email, @Telefono, @Direccion, @Legajo, @Password, @admin)");
                 accesoDatos.agregarParametro("@Nombre", docenteWeb.Nombre);
                 accesoDatos.agregarParametro("Apellido", docenteWeb.Apellido);
                 accesoDatos.agregarParametro("@Dni", docenteWeb.Dni);
@@ -24,6 +24,8 @@ namespace Negocio
                 accesoDatos.agregarParametro("@Telefono", docenteWeb.Telefono);
                 accesoDatos.agregarParametro("@Direccion", docenteWeb.Direccion);
                 accesoDatos.agregarParametro("@Legajo", docenteWeb.Legajo);
+                accesoDatos.agregarParametro("@Password", docenteWeb.Password);
+                accesoDatos.agregarParametro("@admin", docenteWeb.admin);
 
                 accesoDatos.ejecutarAccion();
                 return true;
@@ -40,5 +42,47 @@ namespace Negocio
                 accesoDatos.cerrarConexion();
             }
         }
+
+        public bool docenteLogin(long legajo, string pass)
+        {
+                AccesoDatos accesoDatos = new AccesoDatos();
+            try
+            {
+
+                Docentes docente = new Docentes();
+                bool flag = true;
+                accesoDatos.setearQuery("Select Legajo, Password from Docentes");
+                accesoDatos.ejecutarLector();
+                while (accesoDatos.lector.Read() && flag == true)
+                {
+                    docente.Legajo = accesoDatos.lector.GetInt64(0);
+                    docente.Password = accesoDatos.lector.GetString(1);
+
+                    if(docente.Legajo == legajo && docente.Password == pass)
+                    {
+                        flag = false;
+                    }
+                }
+                if (flag== false)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+            finally
+            {
+                accesoDatos.cerrarConexion();
+            }
+        }
+
     }
 }
