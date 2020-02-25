@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Dominio;
+using Negocio;
 
 namespace TPC_Corrionero
 {
@@ -11,6 +13,24 @@ namespace TPC_Corrionero
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Docentes docenteLogeado = new Docentes();
+            docenteLogeado = (Docentes)Session["docenteLogeado"];
+
+            if(docenteLogeado == null)
+            {
+                barraNav.Visible = false;
+            }
+
+            if(docenteLogeado != null)
+            {
+                if(docenteLogeado.admin == false)
+                {
+                    navAltaAlumno.Visible = false;
+                    navAltaCarrera.Visible = false;
+                    navAltaDocente.Visible = false;
+                    navAltaMateria.Visible = false;
+                }
+            }
 
         }
     }

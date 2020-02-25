@@ -13,6 +13,21 @@ namespace TPC_Corrionero
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            Docentes docenteLogeado = new Docentes();
+            docenteLogeado = (Docentes)Session["docenteLogeado"];
+
+            if (docenteLogeado == null)
+            {
+                Response.Redirect("Login.aspx");
+            }
+            if (docenteLogeado.admin == false)
+            {
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('No tienes permisos de administrador')", true);
+                Response.Redirect("PagPrincipal.aspx");
+            }
+
+
             Page.UnobtrusiveValidationMode = System.Web.UI.UnobtrusiveValidationMode.None;
 
         }

@@ -16,6 +16,13 @@ namespace TPC_Corrionero
         protected void Page_Load(object sender, EventArgs e)
         {
 
+            Docentes docenteLogeado = new Docentes();
+            docenteLogeado = (Docentes)Session["docenteLogeado"];
+
+            if (docenteLogeado == null)
+            {
+                Response.Redirect("Login.aspx");
+            }
 
             if (!IsPostBack)
             {

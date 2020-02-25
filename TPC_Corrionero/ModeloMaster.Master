@@ -14,7 +14,13 @@
     </asp:ContentPlaceHolder>
         <style>
 
-            
+            .userLogeado{
+                padding 5px 5px 5px;
+                background-color: lightblue;
+                border: 1px solid black;
+                color:darkgrey;
+                float:right;
+            }
 
             .btnNav{
                 text-decoration-line: none;
@@ -44,19 +50,24 @@
 <body>
     <form id="form1" runat="server">
 
-                    <div class="container">
+                    <div class="container" runat="server">
         <div>
 
-        <nav class="nav">
+        <nav class="nav" id="barraNav" runat="server" >
             <a class="btnNav" href="PagPrincipal.aspx">Página Principal</a>
-            <a class="btnNav" href="AltaAlumno.aspx">Inscribir Alumno</a>
-            <a class="btnNav"  href="AltaDocente.aspx">Inscribir Docente</a>
-            <a class="btnNav" href="AltaCarrera.aspx">Agregar Carrera</a>
-            <a class="btnNav" href="AltaMateria.aspx">Agregar Materia</a>
-            <a class="btnNav" href="AltaComision.aspx">Agregar Comision</a>
+            <a class="btnNav" id="navAltaAlumno" href="AltaAlumno.aspx" runat="server" >Inscribir Alumno</a>
+            <a class="btnNav" id="navAltaDocente" href="AltaDocente.aspx" runat="server" >Inscribir Docente</a>
+            <a class="btnNav" id="navAltaCarrera" href="AltaCarrera.aspx" runat="server" >Agregar Carrera</a>
+            <a class="btnNav" id="navAltaMateria" href="AltaMateria.aspx" runat="server" >Agregar Materia</a>
+            <a class="btnNav" id="navAltaComision" href="AltaComision.aspx"  >Agregar Comision</a>
             <a class="btnNav" href="ListarComision.aspx">Listar Comisiones</a>
 
         </nav>
+
+            <div class="userLogeado" runat="server">
+                <asp:Label Text="" runat="server" />
+                <asp:Button Text="Salir" class="btn btn-primary" runat="server" />
+            </div>
         
         </div>
     </div>

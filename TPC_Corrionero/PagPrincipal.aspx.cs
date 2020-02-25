@@ -21,6 +21,14 @@ namespace TPC_Corrionero
             {
                 Response.Redirect("Login.aspx");
             }
+            
+            if (docenteLogeado.admin == false)
+            {
+                cardAlumno.Visible = false;
+                cardDocente.Visible = false;
+                cardMateria.Visible = false;
+                
+            }
 
             //object usuarioLogueado = Session["usuarioLogueado"];
             //if (usuarioLogueado != null)

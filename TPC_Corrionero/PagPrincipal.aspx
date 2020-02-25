@@ -24,7 +24,7 @@
         <div class="col-md-12">
 
 
-    <div class="card" style="width: 18rem;">
+    <div class="card" id="cardAlumno" style="width: 18rem;" runat="server" >
   <img src="https://image.flaticon.com/icons/png/512/487/premium/487430.png" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">Agregar Alumno</h5>
@@ -34,7 +34,7 @@
 </div>
            <%-- <% if (((Docente)Session["usuarioLogueado"]).Admin) {
                 } %>--%>
-        <div class="card"style="width: 18rem;" >
+        <div class="card" id="cardDocente" style="width: 18rem;" runat="server" >
   <img src="https://png.pngtree.com/svg/20141030/teacher_837945.png" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">Agregar Docente</h5>
@@ -44,7 +44,7 @@
 </div>
 
 
-            <div class="card" style="width: 18rem;">
+            <div class="card" id="cardMateria" style="width: 18rem;" runat="server" >
   <img src="https://icons-for-free.com/iconfiles/png/512/livejournal+material+network+social+icon-1320184945316485471.png" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">Agregar Materia</h5>
@@ -53,7 +53,7 @@
   </div>
 </div>
 
-                <div class="card" style="width: 18rem;">
+                <div class="card" style="width: 18rem;" runat="server" >
   <img src="https://www.svgrepo.com/show/90040/classroom.svg" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">Agregar Comisión</h5>
@@ -62,7 +62,7 @@
   </div>
 </div>
 
-                        <div class="card" style="width: 18rem;">
+                        <div class="card"  style="width: 18rem;" runat="server" >
   <img src="https://www.svgrepo.com/show/31828/college-classroom.svg" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">Ver Comisiones</h5>
