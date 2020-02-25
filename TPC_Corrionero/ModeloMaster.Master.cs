@@ -18,11 +18,14 @@ namespace TPC_Corrionero
 
             if(docenteLogeado == null)
             {
+                cardDocente.Visible = false;
                 barraNav.Visible = false;
             }
 
             if(docenteLogeado != null)
             {
+                lblDocente.Text = "Docente: " + docenteLogeado.Apellido + ", " + docenteLogeado.Nombre;
+                
                 if(docenteLogeado.admin == false)
                 {
                     navAltaAlumno.Visible = false;
@@ -32,6 +35,11 @@ namespace TPC_Corrionero
                 }
             }
 
+        }
+
+        protected void btnSalirUser_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Login.aspx");
         }
     }
 }

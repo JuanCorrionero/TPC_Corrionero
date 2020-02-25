@@ -14,11 +14,16 @@
     </asp:ContentPlaceHolder>
         <style>
 
+            .navegador{
+                
+            }
+
             .userLogeado{
                 padding 5px 5px 5px;
                 background-color: lightblue;
                 border: 1px solid black;
-                color:darkgrey;
+                color:black;
+                font-family:Calibri;
                 float:right;
             }
 
@@ -51,7 +56,9 @@
     <form id="form1" runat="server">
 
                     <div class="container" runat="server">
-        <div>
+        <div class="navegador">
+           
+
 
         <nav class="nav" id="barraNav" runat="server" >
             <a class="btnNav" href="PagPrincipal.aspx">Página Principal</a>
@@ -63,13 +70,14 @@
             <a class="btnNav" href="ListarComision.aspx">Listar Comisiones</a>
 
         </nav>
-
-            <div class="userLogeado" runat="server">
-                <asp:Label Text="" runat="server" />
-                <asp:Button Text="Salir" class="btn btn-primary" runat="server" />
+            <div id="cardDocente" class="userLogeado" runat="server">
+                <asp:Label ID="lblDocente" Text="" runat="server" />
+                <asp:Button Text="Salir" ID="btnSalirUser"  class="btn btn-primary" OnClick="btnSalirUser_Click" runat="server" />
             </div>
+            </div>
+
         
-        </div>
+
     </div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
 
