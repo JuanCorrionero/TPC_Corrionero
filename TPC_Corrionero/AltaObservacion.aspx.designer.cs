@@ -31,13 +31,13 @@ namespace TPC_Corrionero {
         protected global::System.Web.UI.WebControls.TextBox txtDescripcion;
         
         /// <summary>
-        /// Control ReqApellido.
+        /// Control ReqDescripcion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator ReqApellido;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator ReqDescripcion;
         
         /// <summary>
         /// Control btnAceptar.

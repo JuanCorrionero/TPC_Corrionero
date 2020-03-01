@@ -75,5 +75,38 @@ namespace Negocio
             }
         }
 
+        public bool Editar(ObservacionesInstancia obs)
+        {
+
+            AccesoDatos datos = new AccesoDatos();
+            ObservacionesInstancia aux = new ObservacionesInstancia();
+            try
+            {
+            datos.setearQuery("Update Observaciones set Descripcion = @Descripcion where Id = @Id");
+            datos.agregarParametro("@Id", obs.Id);
+            datos.agregarParametro("@Descripcion", obs.Descripcion);
+            datos.ejecutarLector();
+                while (datos.lector.Read())
+                {
+                    aux.Id = datos.lector.GetInt64(0);
+                    aux.Descripcion = datos.lector.GetString(1);
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+
+            }
+
+            finally
+            {
+                datos.cerrarConexion();
+            }
+
+
+        }
+
     }
 }

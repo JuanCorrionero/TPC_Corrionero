@@ -76,6 +76,7 @@
     <Content Include="AltaMateria.aspx" />
     <Content Include="AltaObservacion.aspx" />
     <Content Include="AlumnosPorComision.aspx" />
+    <Content Include="EditarObs.aspx" />
     <Content Include="Global.asax" />
     <Content Include="InstanciaPorComision.aspx" />
     <Content Include="ListarComision.aspx" />
@@ -150,6 +151,13 @@
     <Compile Include="AlumnosPorComision.aspx.designer.cs">
       <DependentUpon>AlumnosPorComision.aspx</DependentUpon>
     </Compile>
+    <Compile Include="EditarObs.aspx.cs">
+      <DependentUpon>EditarObs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditarObs.aspx.designer.cs">
+      <DependentUpon>EditarObs.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -210,6 +218,7 @@
       <DependentUpon>PagPrincipal.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UsuariosNegocio.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="ModeloMaster.Master" />

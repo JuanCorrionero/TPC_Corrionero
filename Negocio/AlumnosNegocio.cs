@@ -109,5 +109,35 @@ namespace Negocio
                 datos.cerrarConexion();
             }
         }
+
+        string Email;
+        public string mailAlumno(long Id)
+        {
+            Alumnos oAlumno = new Alumnos();
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearQuery("Select Email from Alumnos where @Id = Id");
+                datos.agregarParametro("@Id", Id);
+                datos.ejecutarLector();
+                if (datos.lector.Read())
+                {
+                    Email = datos.lector.GetString(0);
+                }
+
+                return Email;
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
     }
 }

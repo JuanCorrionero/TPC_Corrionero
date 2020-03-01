@@ -40,7 +40,7 @@
         </div>
 
     <asp:TextBox ID="txtDescripcion"  Width="300px" CssClass="form form-control" placeholder="Observación" runat="server"></asp:TextBox>
-    <asp:RequiredFieldValidator ID="ReqApellido" runat="server" ControlToValidate="txtDescripcion" ErrorMessage="Requiere completar"></asp:RequiredFieldValidator>
+    <asp:RequiredFieldValidator ID="ReqDescripcion" runat="server" ControlToValidate="txtDescripcion" ErrorMessage="Requiere completar"></asp:RequiredFieldValidator>
     <br />
 
     <asp:Button ID="btnAceptar" CssClass="btn btn-outline-success" OnClick="btnAceptar_Click" runat="server" Text="Aceptar" />

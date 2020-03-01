@@ -51,17 +51,20 @@
     <br />
 
     <asp:GridView ID="dgvListaObservaciones" ShowHeaderWhenEmpty="true" CssClass="table table-striped table-secondary"
-        AutoGenerateColumns="false"
+        AutoGenerateColumns="false" OnRowCommand="dgvListaObservaciones_RowCommand"
          runat="server" >
         <Columns>
             <asp:BoundField HeaderText="Id" DataField="Id" />
             <asp:BoundField HeaderText="Descripcion" DataField="Descripcion" />
-            <%--<asp:TemplateField HeaderText="Opcion">
+            <asp:TemplateField HeaderText="Opcion">
                     <ItemTemplate>
-                        <asp:Button ID="btnAgregar" runat="server" Text="Ver observaciones"  CssClass="btn btn-outline-info" CausesValidation="False" 
-                            CommandName="Agregar" CommandArgument="<%# ((GridViewRow) Container).RowIndex %>" />
+                        <asp:Button ID="btnEditar" runat="server" Text="Editar"  CssClass="btn btn-outline-success" CausesValidation="False" 
+                            CommandName="Editar" CommandArgument="<%# ((GridViewRow) Container).RowIndex %>" />
+                         <asp:Button ID="btnMail" runat="server" Text="Enviar por Mail"  CssClass="btn btn-outline-warning" CausesValidation="False" 
+                            CommandName="Mail" CommandArgument="<%# ((GridViewRow) Container).RowIndex %>"  />
             </ItemTemplate>
-             </asp:TemplateField>--%>
+             </asp:TemplateField>
+
         </Columns>
     </asp:GridView>
 
