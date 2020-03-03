@@ -15,7 +15,9 @@
             <asp:label text="Comisión: " runat="server" />
             <asp:label ID="lblComision" text="" runat="server" />
         </h1>
-
+          <div style="float: right;">
+        <asp:Button ID="BotonVolver" Text="Volver" CssClass="btn btn-outline-secondary" OnClick="BotonVolver_Click" runat="server" />
+        </div>
     </center>
 
     <asp:GridView ID="dgvListaAlumnos" ShowHeaderWhenEmpty="true" CssClass="table table-striped table-secondary"

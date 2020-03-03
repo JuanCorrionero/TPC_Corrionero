@@ -13,6 +13,7 @@ namespace Dominio
         public Materia Materia { get; set; }
         public Turnos Turno { get; set; }
         public int Cuatrimestre { get; set; }
-       
+        public long IdDocente { get; set; }
+
     }
 }

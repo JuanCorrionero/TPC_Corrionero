@@ -21,6 +21,7 @@ namespace TPC_Corrionero
             {
                 Response.Redirect("Login.aspx");
             }
+          
 
 
             Page.UnobtrusiveValidationMode = System.Web.UI.UnobtrusiveValidationMode.None;
@@ -55,16 +56,17 @@ namespace TPC_Corrionero
 
             try
             {
-            ComisionNegocio negocio = new ComisionNegocio();
+                Docentes docenteLogeado = new Docentes();
+                docenteLogeado = (Docentes)Session["docenteLogeado"];
+                ComisionNegocio negocio = new ComisionNegocio();
             Comision comision = new Comision();
-                // comision.Turno = new Turnos();
             Materia materia = new Materia();
             Turnos turno = new Turnos();
                 comision.Nombre = txtNombre.Text;
                 comision.Cuatrimestre = Convert.ToInt16(txtCuatrimestre.Text);
                 long idTurno = Convert.ToInt64(dwTurnos.SelectedItem.Value);
                 long idMateria = Convert.ToInt64(dwMateria.SelectedItem.Value);
-                if(negocio.altaComision(comision, idTurno, idMateria))
+                if(negocio.altaComision(comision, idTurno, idMateria, docenteLogeado.Id))
                 {
                     Session.Add("Exito", "La comision ha sido agregada con exito!");
                     Response.Redirect("PaginaExito.aspx");

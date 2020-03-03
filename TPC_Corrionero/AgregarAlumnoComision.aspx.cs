@@ -53,9 +53,8 @@ namespace TPC_Corrionero
                 AlumnosXComisionNegocio AluCoNegocio = new AlumnosXComisionNegocio();
                 if(AluCoNegocio.Alta(Id, Convert.ToInt64(Session["IdComision"])))
                 {
-                string exito = "El alumno fue agregado en al comisión con exito!";
-                Session.Add("Exito", exito );
-                Response.Redirect("PaginaExito.aspx");
+                
+                Response.Redirect("AlumnosPorComision.aspx");
 
                 }
 
@@ -67,6 +66,11 @@ namespace TPC_Corrionero
                 }
 
             }
+        }
+
+        protected void BotonVolver_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("AlumnosPorComision.aspx");
         }
     }
 }

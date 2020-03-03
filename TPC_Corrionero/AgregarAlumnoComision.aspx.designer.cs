@@ -22,6 +22,15 @@ namespace TPC_Corrionero {
         protected global::System.Web.UI.WebControls.Label lblComision;
         
         /// <summary>
+        /// Control BotonVolver.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BotonVolver;
+        
+        /// <summary>
         /// Control dgvListaAlumnos.
         /// </summary>
         /// <remarks>

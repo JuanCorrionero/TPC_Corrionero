@@ -13,6 +13,15 @@ namespace TPC_Corrionero
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Docentes docenteLogeado = new Docentes();
+            docenteLogeado = (Docentes)Session["docenteLogeado"];
+
+            if (docenteLogeado == null)
+            {
+                chkLogin.Visible = false;
+            }
+
+
             Page.UnobtrusiveValidationMode = System.Web.UI.UnobtrusiveValidationMode.None;
         }
 

@@ -26,7 +26,7 @@ namespace TPC_Corrionero
             if (!IsPostBack)
             {
             ComisionNegocio negocio = new ComisionNegocio();
-            dgvListaComision.DataSource = negocio.listar();
+            dgvListaComision.DataSource = negocio.listar(docenteLogeado.Id);
             dgvListaComision.DataBind();
 
             }

@@ -10,16 +10,17 @@ namespace Negocio
      public class ComisionNegocio
     {
 
-        public bool altaComision(Comision comisionWEB, long idTurno, long idMateria)
+        public bool altaComision(Comision comisionWEB, long idTurno, long idMateria, long IdDocente)
         {
             AccesoDatos datos = new AccesoDatos();
             try
             {
-            datos.setearQuery("Insert into Comisiones values(@Nombre, @IdMateria, @IdTurnos, @Cuatrimestre)");
+            datos.setearQuery("Insert into Comisiones values(@Nombre, @IdMateria, @IdTurnos, @Cuatrimestre, @IdDocente)");
             datos.agregarParametro("@Nombre", comisionWEB.Nombre);
             datos.agregarParametro("@IdMateria", idMateria);
             datos.agregarParametro("@IdTurnos", idTurno);
             datos.agregarParametro("@Cuatrimestre", comisionWEB.Cuatrimestre);
+                datos.agregarParametro("@IdDocente", IdDocente);
             datos.ejecutarAccion();
 
 
@@ -37,13 +38,14 @@ namespace Negocio
             }
         }
 
-        public List<Comision> listar()
+        public List<Comision> listar(long IdDocente)
         {
             AccesoDatos datos = new AccesoDatos();
             try
             {
                 List<Comision> aux = new List<Comision>();
-                datos.setearQuery("Select C.Id, C.Nombre, M.Nombre, T.Nombre, Cuatrimestre from Comisiones as C inner join Materias as M on C.IdMateria = M.Id inner join Turnos as T on C.IdTurnos = T.Id");
+                datos.setearQuery("Select C.Id, C.Nombre, M.Nombre, T.Nombre, Cuatrimestre from Comisiones as C inner join Materias as M on C.IdMateria = M.Id inner join Turnos as T on C.IdTurnos = T.Id where IdDocente = @IdDocente");
+                datos.agregarParametro("@IdDocente", IdDocente);
                 datos.ejecutarLector();
                 while (datos.lector.Read())
                 {
