@@ -16,7 +16,7 @@ namespace Negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setearQuery("Insert into AlumnosPorComision values (@IdAlumno, @IdComision)");
+                datos.setearQuery("Insert into AlumnosPorComision values (@IdAlumno, @IdComision, 1)");
                 datos.agregarParametro("@IdAlumno", IdAlumno);
                 datos.agregarParametro("@IdComision", IdComision);
                 datos.ejecutarAccion();
@@ -41,7 +41,7 @@ throw ex;
             try
             {
                 List<Alumnos> oAlu = new List<Alumnos>();
-                datos.setearQuery("Select A.Id, Dni, Legajo, Apellido, Nombre from Alumnos as A inner join AlumnosPorComision as AC on AC.IdComision = @IdComision where A.Id = AC.IdAlumno");
+                datos.setearQuery("Select A.Id, Dni, Legajo, Apellido, Nombre from Alumnos as A inner join AlumnosPorComision as AC on AC.IdComision = @IdComision where A.Id = AC.IdAlumno and AC.Estado = 1");
                 datos.agregarParametro("@IdComision", IdComision);
                 datos.ejecutarLector();
                 while (datos.lector.Read())

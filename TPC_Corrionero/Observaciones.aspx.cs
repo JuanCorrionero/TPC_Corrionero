@@ -115,7 +115,7 @@ namespace TPC_Corrionero
                 message.IsBodyHtml = true;
                 SmtpClient client = new SmtpClient("smtp.gmail.com", 587); //Gmail smtp    
                 System.Net.NetworkCredential basicCredential1 = new
-                System.Net.NetworkCredential("yourmail id", "Password");
+                System.Net.NetworkCredential("sas.corrionero@gmail.com", "16441644");
                 client.EnableSsl = true;
                 client.UseDefaultCredentials = false;
                 client.Credentials = basicCredential1;

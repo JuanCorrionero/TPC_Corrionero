@@ -79,6 +79,7 @@
     <Content Include="EditarObs.aspx" />
     <Content Include="Global.asax" />
     <Content Include="InstanciaPorComision.aspx" />
+    <Content Include="ListarAlumnos.aspx" />
     <Content Include="ListarComision.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Observaciones.aspx" />
@@ -168,6 +169,13 @@
     <Compile Include="InstanciaPorComision.aspx.designer.cs">
       <DependentUpon>InstanciaPorComision.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ListarAlumnos.aspx.cs">
+      <DependentUpon>ListarAlumnos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListarAlumnos.aspx.designer.cs">
+      <DependentUpon>ListarAlumnos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ListarComision.aspx.cs">
       <DependentUpon>ListarComision.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -218,7 +226,6 @@
       <DependentUpon>PagPrincipal.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UsuariosNegocio.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="ModeloMaster.Master" />

@@ -71,6 +71,15 @@
     </div>
     </div>
 
+                    <div class="card" id="cardListarAlumnos" style="width: 18rem;" runat="server" >
+  <img src="https://image.flaticon.com/icons/png/512/264/264780.png" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Listar Alumnos</h5>
+    <p class="card-text">Una lista con todos los alumnos registrados</p>
+    <a href="ListarAlumnos.aspx" class="btn btn-primary">Listar Alumnos</a>
+  </div>
+</div>
+
             </div>
     </div>
         </div>
