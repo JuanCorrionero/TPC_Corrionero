@@ -39,6 +39,8 @@ namespace TPC_Corrionero
                     InstanciaNegocio negocioInsta = new InstanciaNegocio();
                     dgvListaInstancias.DataSource = negocioInsta.listar(IdComision, IdAlumno);
                     dgvListaInstancias.DataBind();
+
+                
                 
             }
             

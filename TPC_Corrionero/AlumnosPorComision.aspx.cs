@@ -36,6 +36,9 @@ namespace TPC_Corrionero
                 dgvAlumnosPorComision.DataSource = nego.listar(IdComision);
                 dgvAlumnosPorComision.DataBind();
 
+                dgvBaja.DataSource = nego.listarBaja(IdComision);
+                dgvBaja.DataBind();
+
             }
 
 
@@ -56,12 +59,68 @@ namespace TPC_Corrionero
                 Response.Redirect("InstanciaPorComision.aspx");
 
             }
+
+            if(e.CommandName == "BajaAlumno")
+            {
+                int index = Convert.ToInt32(e.CommandArgument);
+
+                //Reference the GridView Row.
+                GridViewRow row = dgvAlumnosPorComision.Rows[index];
+
+                long Id = Convert.ToInt64(row.Cells[1].Text);
+
+                AlumnosXComisionNegocio negocio = new AlumnosXComisionNegocio();
+
+                if (negocio.BajaAlumno(Id)){
+                    Response.Redirect("AlumnosPorComision.aspx");
+                }
+                else
+                {
+                Session.Add("Error", "Hubo un error al dar de baja el alumno en la comisión.");
+                Response.Redirect("PaginaError.aspx");
+                    
+                }
+
+
+            }
+
+
         }
         
 
         protected void BotonVolver_Click(object sender, EventArgs e)
         {
             Response.Redirect("ListarComision.aspx");
+        }
+
+        protected void dgvBaja_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+
+            if (e.CommandName == "ReIngresar")
+            {
+                int index = Convert.ToInt32(e.CommandArgument);
+
+                //Reference the GridView Row.
+                GridViewRow row = dgvBaja.Rows[index];
+
+                long Id = Convert.ToInt64(row.Cells[1].Text);
+
+                AlumnosXComisionNegocio negocio = new AlumnosXComisionNegocio();
+
+                if (negocio.ReIngresarAlumno(Id))
+                {
+                    Response.Redirect("AlumnosPorComision.aspx");
+                }
+                else
+                {
+                    Session.Add("Error", "Hubo un error al dar de baja el alumno en la comisión.");
+                    Response.Redirect("PaginaError.aspx");
+
+                }
+
+
+            }
+
         }
     }
 }
